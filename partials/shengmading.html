@@ -1,13 +1,65 @@
-<section >
+<section ng-controller="smdCtrl">
     <div>
         <img src="img/shengmading.jpg" style="position:absolute;left:5px;top:0px;z-index:-1;zoom: 2.5;height: auto">
         <div style="color: #ffffff;margin-top: 100px;margin-left: 50px;">
             <h2 >店庆大抽奖，奖品有惊喜！！</h2>
-            <div style="margin-top: 30px;" class="btn btn-primary btn-lg">
+            <div style="margin-top: 30px;" class="btn btn-primary btn-lg" ng-click="enterMain()">
                 开始抽奖
             </div>
         </div>
-
     </div>
 
+    <div id="jquery_jplayer_1" class="jp-jplayer"></div>
+    <div id="jp_container_1" class="jp-audio">
+        <div class="jp-type-single">
+            <div class="jp-gui jp-interface">
+                <ul class="jp-controls">
+                    <li><a href="javascript:;" class="jp-play" tabindex="1">play</a></li>
+                    <li><a href="javascript:;" class="jp-pause" tabindex="1">pause</a></li>
+                    <li><a href="javascript:;" class="jp-stop" tabindex="1">stop</a></li>
+                    <li><a href="javascript:;" class="jp-mute" tabindex="1" title="mute">mute</a></li>
+                    <li><a href="javascript:;" class="jp-unmute" tabindex="1" title="unmute">unmute</a></li>
+                    <li><a href="javascript:;" class="jp-volume-max" tabindex="1" title="max volume">max volume</a></li>
+                </ul>
+                <div class="jp-progress">
+                    <div class="jp-seek-bar">
+                        <div class="jp-play-bar"></div>
+                    </div>
+                </div>
+                <div class="jp-volume-bar">
+                    <div class="jp-volume-bar-value"></div>
+                </div>
+                <div class="jp-time-holder">
+                    <div class="jp-current-time"></div>
+                    <div class="jp-duration"></div>
+                    <ul class="jp-toggles">
+                        <li><a href="javascript:;" class="jp-repeat" tabindex="1" title="repeat">repeat</a></li>
+                        <li><a href="javascript:;" class="jp-repeat-off" tabindex="1" title="repeat off">repeat off</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="jp-details">
+                <ul>
+                    <li><span class="jp-title"></span></li>
+                </ul>
+            </div>
+            <div class="jp-no-solution">
+                <span>Update Required</span>
+                To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#jquery_jplayer_1").jPlayer({
+                ready: function () {
+                    $(this).jPlayer("setMedia", {
+                        title: "I Swear (All-4-ONE)",
+                        mp3: "music/I Swear.mp3"
+                    }).jPlayer("play").jPlayer("volume", 0.5);
+                },
+                swfPath: "lib/jquery"
+            });
+        });
+    </script>
 </section>
