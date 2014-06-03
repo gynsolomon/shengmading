@@ -10,13 +10,29 @@
         <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
         <link rel="stylesheet" href="lib/bootstrap/css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="skin/jplayer.blue.monday.css">
+        <link rel="stylesheet" href="css/loader.css">
         <script src="lib/jquery/jquery-1.10.2.min.js"></script>
         <script type="text/javascript" src="lib/jquery/jquery.jplayer.min.js"></script>
 
+        <link href="css/default.css" type="text/css" rel="stylesheet">
+        <script type="text/javascript" src="js/garden.js"></script>
+        <script type="text/javascript" src="js/functions.js"></script>
+
     </head>
     <body>
-        <div class="container">
+        <div>
             <div ng-view></div>
+        </div>
+        <div id="loaderModal" class="modal fade" role="dialog" aria-labelledby="lessonsLoaderLabel"
+             data-backdrop="static" style="background-color:#000000;opacity: 1">
+            <div class="spinner">
+                <div class="rect1"></div>
+                <div class="rect2"></div>
+                <div class="rect3"></div>
+                <div class="rect4"></div>
+                <div class="rect5"></div>
+                <h3 style="width:200%;margin-left:-50%;color:#ffffff">正在分析抽奖结果</h3>
+            </div>
         </div>
         <script src="lib/bootstrap/js/bootstrap.min.js"></script>
         <script src="lib/angular/angular.js"></script>
