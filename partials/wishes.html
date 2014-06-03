@@ -1,1 +1,17 @@
-<section>test</section>
+<section ng-controller="wishesCtrl">
+    <audio autoplay>
+        <source src="music/liuruoying.mp3" type="audio/mpeg">
+    </audio>
+    <div>
+        <div style="height: 305px" class="carousel ng-isolate-scope">
+            <carousel interval="myInterval">
+                <slide ng-repeat="slide in slides" active="slide.active">
+                    <div class="carousel-caption">
+                        <h4>{{$index+1}}</h4>
+                    </div>
+                    <img ng-src="{{slide.image}}" style="margin:auto;">
+                </slide>
+            </carousel>
+        </div>
+    </div>
+</section>
