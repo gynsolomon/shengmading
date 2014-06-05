@@ -47,7 +47,7 @@ angular.module('myApp.controllers', ['ngResource', 'ngRoute', 'ngSanitize'])
             });
         };
 
-        for (var i=0; i<7; i++) {
+        for (var i=0; i<9; i++) {
             $scope.addSlide(i);
         }
 
